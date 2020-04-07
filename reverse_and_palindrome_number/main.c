@@ -45,6 +45,37 @@ unsigned int reverse_given_number(unsigned int original_number)
 	return reverse_number;
 }
 
+bool check_if_number_is_palindrome(unsigned int number) {
+	/********************************************************\
+	* Function name - check_if_number_is_palindrome
+	*
+	* Function Purpose - check if the given number is a palindrome
+	*
+	* Parameters - IN unsigned int number - number from user
+	*			   OUT bool - true - if the given number is a palindrome
+	*						  false - otherwise
+	*
+	* Return Value - true - if the given number is a palindrome
+	*				 false - otherwise
+	*
+	* Side Effects - this function has no side effects
+	*
+	* Semantics - this function check if the given number is a plindrome
+	*
+	* Author - Liri
+	\********************************************************/
+	unsigned int reverse_number = ZERO;
+	reverse_number = reverse_given_number(number);
+	if (number == reverse_number)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
 void main()
 {
 	/********************************************************\
