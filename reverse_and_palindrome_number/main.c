@@ -5,8 +5,15 @@ Purpose: This file run the program that reverse number
 and check if the number is palindrome
 \********************************************************/
 
+#define _CRT_SECURE_NO_WARNINGS
 #define DECIMAL (10)
 #define ZERO (0)
+#define STRING_GET_NUMBER_FROM_USER ("Enter number you want to reverse: \n")
+#define GET_INTEGER ("%d")
+#define STRING_PRINT_REVERSE_NUMBER ("The reverse number is:\n%d\n")
+
+#include <stdio.h>
+#include <stdbool.h>
 
 unsigned int reverse_given_number(unsigned int original_number)
 {
@@ -36,4 +43,36 @@ unsigned int reverse_given_number(unsigned int original_number)
 		original_number = original_number / DECIMAL;
 	}
 	return reverse_number;
+}
+
+void main()
+{
+	/********************************************************\
+	* Function name - main
+	*
+	* Function Purpose - get number from the user and
+	*					 run function that reverse the number
+	*					 and check if number is palindrome
+	*
+	* Parameters - no Input/Output parameters
+	*
+	* Return Value - there isn't return value
+	*
+	* Side Effects - this function has no side effects
+	*
+	* Semantics - get number from the user and run function that
+	*			  reverse the number, and check if the number is palindrome
+	*
+	* Author - Liri
+	\********************************************************/
+	unsigned int original_number = ZERO;
+	unsigned int reverse_number = ZERO;
+	bool is_number_palindrome = false;
+
+	printf(STRING_GET_NUMBER_FROM_USER);
+	scanf(GET_INTEGER, &original_number);
+
+	/*calculate the reverse number*/
+	reverse_number = reverse_given_number(original_number);
+	printf(STRING_PRINT_REVERSE_NUMBER, reverse_number);
 }
