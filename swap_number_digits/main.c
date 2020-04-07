@@ -87,3 +87,36 @@ unsigned int* swap_array_elements(unsigned int *number_array,
 	}
 	return number_array;
 }
+
+unsigned int convert_array_to_number(unsigned int *number_array,
+	int number_of_digits)
+{
+	/********************************************************\
+	* Function name - convert_array_to_number
+	*
+	* Function Purpose - convert the elements of the array to number
+	*
+	* Parameters - INOUT unsigned int *number_array - the array that contain the
+	*									 digits of the number, that will be
+	*									swapped
+	*			   IN int number of digits - the number of the digits
+	*									in the given number, which is
+	*									the size of the array
+	*
+	* Return Value - number that its digits are the elements of number_array
+	*
+	* Side Effects - this function convert the elements of array to number
+	*
+	* Semantics - convert the elements of array to number
+	*
+	* Author - Liri
+	\********************************************************/
+	int index = INITIAL_INDEX;
+	unsigned int number_after_swap = INITIAL_NUMBER;
+
+	for (index = INITIAL_INDEX; index < number_of_digits; ++index)
+	{
+		number_after_swap = DECIMAL * number_after_swap + number_array[index];
+	}
+	return number_after_swap;
+}
