@@ -5,11 +5,19 @@ Purpose: This file run the program that swap number
 		  by swap each corresponding elements
 \********************************************************/
 
+#define _CRT_SECURE_NO_WARNINGS
 #define INITIAL_INDEX (0)
 #define DECIMAL (10)
 #define ONE (1)
 #define INITIAL_NUMBER (0)
 #define MIDDLE_OF_ARRAY (2)
+#define STRING_TO_ENTER_NUMBER ("Enter a number: \n")
+#define GET_INTEGER ("%d")
+#define STRING_PRINT_NUMBER_AFTER_SWAP ("number after swap: \n%d\n")
+
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
 
 unsigned int* convert_number_to_array(unsigned int *number_array,
 	int number_of_digits,
@@ -171,4 +179,39 @@ unsigned int swap_number_digits(unsigned int original_number)
 	free(number_array);
 
 	return number_after_swap;
+}
+
+void main()
+{
+	/********************************************************\
+	* Function name - main
+	*
+	* Function Purpose - get number from the user and
+	*					 run functions that reverse the number
+	*					 such that it swaps first digit with last digit
+	*					 and so on and print the reverse number
+	*
+	* Parameters - no Input/Output parameters
+	*
+	* Return Value - there isn't return value
+	*
+	* Side Effects - this function call to function that allocate memory
+	*				 in order to save the digits of the number and swap them
+	*				 and in the end the function free this memory
+	*
+	* Semantics -  get number from user run functions that convert number to array,
+	*				reverse the elements in the array such that it swaps first element
+	*				with last element and so on, and convert the array to number
+	*
+	* Author - Liri
+	\********************************************************/
+	unsigned int original_number = INITIAL_NUMBER;
+	unsigned int number_after_swap = INITIAL_NUMBER;
+
+	printf(STRING_TO_ENTER_NUMBER);
+	scanf(GET_INTEGER, &original_number);
+
+	number_after_swap = swap_number_digits(original_number);
+
+	printf(STRING_PRINT_NUMBER_AFTER_SWAP, number_after_swap);
 }

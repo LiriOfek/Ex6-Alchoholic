@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "reverse_and_palindrome_number", "reverse_and_palindrome_number\reverse_and_palindrome_number.vcxproj", "{DD2EDFD7-7AA5-4CC0-A5C9-0B87F1D85E57}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "swap_number_digits", "swap_number_digits\swap_number_digits.vcxproj", "{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{DD2EDFD7-7AA5-4CC0-A5C9-0B87F1D85E57}.Release|x64.Build.0 = Release|x64
 		{DD2EDFD7-7AA5-4CC0-A5C9-0B87F1D85E57}.Release|x86.ActiveCfg = Release|Win32
 		{DD2EDFD7-7AA5-4CC0-A5C9-0B87F1D85E57}.Release|x86.Build.0 = Release|Win32
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Debug|x64.ActiveCfg = Debug|x64
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Debug|x64.Build.0 = Debug|x64
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Debug|x86.ActiveCfg = Debug|Win32
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Debug|x86.Build.0 = Debug|Win32
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Release|x64.ActiveCfg = Release|x64
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Release|x64.Build.0 = Release|x64
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Release|x86.ActiveCfg = Release|Win32
+		{42F7D15E-C0AE-45F9-B2DE-5967BE0D206E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
