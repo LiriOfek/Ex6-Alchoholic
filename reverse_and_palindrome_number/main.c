@@ -5,7 +5,6 @@ Purpose: This file run the program that reverse number
 and check if the number is palindrome
 \********************************************************/
 
-#define _CRT_SECURE_NO_WARNINGS
 #define DECIMAL (10)
 #define ZERO (0)
 #define STRING_GET_NUMBER_FROM_USER ("Enter number you want to reverse: \n")
@@ -70,7 +69,7 @@ void main()
 	bool is_number_palindrome = false;
 
 	printf(STRING_GET_NUMBER_FROM_USER);
-	scanf(GET_INTEGER, &original_number);
+	scanf_s(GET_INTEGER, &original_number);
 
 	/*calculate the reverse number*/
 	reverse_number = reverse_given_number(original_number);
