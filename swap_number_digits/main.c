@@ -5,7 +5,6 @@ Purpose: This file run the program that swap number
 		  by swap each corresponding elements
 \********************************************************/
 
-#define _CRT_SECURE_NO_WARNINGS
 #define INITIAL_INDEX (0)
 #define DECIMAL (10)
 #define ONE (1)
@@ -209,7 +208,7 @@ void main()
 	unsigned int number_after_swap = INITIAL_NUMBER;
 
 	printf(STRING_TO_ENTER_NUMBER);
-	scanf(GET_INTEGER, &original_number);
+	scanf_s(GET_INTEGER, &original_number);
 
 	number_after_swap = swap_number_digits(original_number);
 
