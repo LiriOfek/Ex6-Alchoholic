@@ -120,3 +120,55 @@ unsigned int convert_array_to_number(unsigned int *number_array,
 	}
 	return number_after_swap;
 }
+
+unsigned int swap_number_digits(unsigned int original_number)
+{
+	/********************************************************\
+	* Function name - swap_number_digits
+	*
+	* Function Purpose - run functions that reverse the number
+	*					 such that it swaps first digit with last digit
+	*					 and so on
+	*
+	* Parameters - IN unsigned int original_number - the number before swapping
+	*			   OUT unsigned int number number_after_swap - the number after
+	*						swapping its digits
+	*
+	* Return Value - the reverse number
+	*
+	* Side Effects - this function allocate memory in order to
+	*				 save the digits of the number and swap them
+	*				 and in the end the function free this memory
+	*
+	* Semantics -   run functions that convert number to array,
+	*				reverse the elements in the array such that it swaps first element
+	*				with last element and so on, and convert the array to number
+	*
+	* Author - Liri
+	\********************************************************/
+	int number_of_digits = INITIAL_NUMBER;
+	unsigned int* number_array;
+	unsigned int number_after_swap = INITIAL_NUMBER;
+
+	/*calculate the number i=of the digits in the given number*/
+	number_of_digits = (int)log10(original_number) + ONE;
+	/*allocate array in size of the number of the digits*/
+	number_array = calloc(number_of_digits, sizeof(int));
+
+	/*save the digits of the number in array*/
+	number_array = convert_number_to_array(number_array,
+		number_of_digits,
+		original_number);
+
+	/*swap array elements*/
+	number_array = swap_array_elements(number_array,
+		number_of_digits);
+
+	/*save the elements from the array to number*/
+	number_after_swap = convert_array_to_number(number_array,
+		number_of_digits);
+
+	free(number_array);
+
+	return number_after_swap;
+}
