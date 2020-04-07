@@ -11,6 +11,8 @@ and check if the number is palindrome
 #define STRING_GET_NUMBER_FROM_USER ("Enter number you want to reverse: \n")
 #define GET_INTEGER ("%d")
 #define STRING_PRINT_REVERSE_NUMBER ("The reverse number is:\n%d\n")
+#define STRING_NUMBER_IS_PALINDROME ("The number you entered: %d is a palindrome\n")
+#define STRING_NUMBER_IS_NOT_PALINDROME ("The number you entered: %d is not a palindrome\n")
 
 #include <stdio.h>
 #include <stdbool.h>
@@ -45,37 +47,6 @@ unsigned int reverse_given_number(unsigned int original_number)
 	return reverse_number;
 }
 
-bool check_if_number_is_palindrome(unsigned int number) {
-	/********************************************************\
-	* Function name - check_if_number_is_palindrome
-	*
-	* Function Purpose - check if the given number is a palindrome
-	*
-	* Parameters - IN unsigned int number - number from user
-	*			   OUT bool - true - if the given number is a palindrome
-	*						  false - otherwise
-	*
-	* Return Value - true - if the given number is a palindrome
-	*				 false - otherwise
-	*
-	* Side Effects - this function has no side effects
-	*
-	* Semantics - this function check if the given number is a plindrome
-	*
-	* Author - Liri
-	\********************************************************/
-	unsigned int reverse_number = ZERO;
-	reverse_number = reverse_given_number(number);
-	if (number == reverse_number)
-	{
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
 void main()
 {
 	/********************************************************\
@@ -106,4 +77,5 @@ void main()
 	/*calculate the reverse number*/
 	reverse_number = reverse_given_number(original_number);
 	printf(STRING_PRINT_REVERSE_NUMBER, reverse_number);
+
 }
